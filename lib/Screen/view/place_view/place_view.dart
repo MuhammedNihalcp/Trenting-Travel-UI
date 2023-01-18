@@ -30,25 +30,7 @@ class ScreenPlaceView extends StatelessWidget {
               children: [
                 ProductMainImage(height: height),
                 kHeight20,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'Lalakhal',
-                      style: homeText,
-                    ),
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 19,
-                        ),
-                        Text('(5.7)'),
-                      ],
-                    ),
-                  ],
-                ),
+                const ProductName(),
                 kHeight10,
                 const Text(
                   'Udaipur, also known as the City of Lakes, is the crown jewel of the state of Rajasthan. It is surrounded by the beautiful Aravalli Hills',
@@ -102,4 +84,31 @@ class ScreenPlaceView extends StatelessWidget {
   }
 }
 
+class ProductName extends StatelessWidget {
+  const ProductName({
+    Key? key,
+  }) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        const Text(
+          'Lalakhal',
+          style: homeText,
+        ),
+        Row(
+          children: const [
+            Icon(
+              Icons.star,
+              color: Colors.yellow,
+              size: 19,
+            ),
+            Text('(5.7)'),
+          ],
+        ),
+      ],
+    );
+  }
+}
