@@ -75,65 +75,92 @@ class ScreenHome extends StatelessWidget {
                   ),
                 ),
                 kHeight10,
-                CarouselSlider.builder(
-                  itemCount: carouselImages.length,
-                  itemBuilder: (context, index, realIndex) => Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: width * 0.8,
-                        height: height * 0.3,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(carouselImages[index]),
-                            fit: BoxFit.cover,
-                          ),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text(
-                          carousalNames[index],
-                          style: homeText,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.star,
-                                  color: Colors.yellow,
-                                  size: 19,
-                                ),
-                                Text('(5.7)'),
-                              ],
-                            ),
-                            const Text('\$2,999',style: TextStyle(color: colorGrey),)
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  options: CarouselOptions(
-                    height: height * 0.48,
-                    autoPlay: true,
-                    autoPlayInterval: const Duration(seconds: 5),
-                    enlargeCenterPage: true,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    enableInfiniteScroll: false,
-                  ),
+                CarousalWidget(
+                  carouselImages: carouselImages,
+                  width: width,
+                  height: height,
+                  carousalNames: carousalNames,
                 ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class CarousalWidget extends StatelessWidget {
+  const CarousalWidget({
+    Key? key,
+    required this.carouselImages,
+    required this.width,
+    required this.height,
+    required this.carousalNames,
+  }) : super(key: key);
+
+  final List<String> carouselImages;
+  final double width;
+  final double height;
+  final List<String> carousalNames;
+
+  @override
+  Widget build(BuildContext context) {
+    return CarouselSlider.builder(
+      itemCount: carouselImages.length,
+      itemBuilder: (context, index, realIndex) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: width * 0.8,
+            height: height * 0.3,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(carouselImages[index]),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              carousalNames[index],
+              style: homeText,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: const [
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 19,
+                    ),
+                    Text('(5.7)'),
+                  ],
+                ),
+                const Text(
+                  '\$2,999',
+                  style: TextStyle(color: colorGrey),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+      options: CarouselOptions(
+        height: height * 0.48,
+        autoPlay: true,
+        autoPlayInterval: const Duration(seconds: 5),
+        enlargeCenterPage: true,
+        autoPlayCurve: Curves.fastOutSlowIn,
+        autoPlayAnimationDuration: const Duration(milliseconds: 800),
+        enableInfiniteScroll: false,
       ),
     );
   }
