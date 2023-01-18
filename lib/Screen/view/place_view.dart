@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tranting_travel_ui/Screen/view/widget/product_bottom_nav.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
@@ -100,6 +101,10 @@ class ScreenPlaceView extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: ProductBottomNev(
+        width: width,
+        height: height,
       ),
     );
   }
