@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_cards/flutter_custom_cards.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/personal_details.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
 class ScreenHome extends StatelessWidget {
-  const ScreenHome({super.key});
-
+  const ScreenHome({Key? key, required this.width,required this.height,}):super(key: key);
+final double width;
+final double height;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundC,
       body: SafeArea(
         child: Column(
-          children: const [
+          children:  [
             kHeight10,
-            PersonalDetails(),
-            
+            const PersonalDetails(),
+            CustomCard(
+              width: width * 0.8,
+              height: height * 0.3,
+            )
           ],
         ),
       ),

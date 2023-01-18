@@ -35,7 +35,12 @@ class ScreenWelcome extends StatelessWidget {
                     ),
                     minimumSize: Size(width * 0.6, height * 0.1)),
                 onPressed: () {
-                  Get.offAll(() => ScreenHome());
+                  Get.offAll(
+                    () => ScreenHome(
+                      width: width,
+                      height: height,
+                    ),
+                  );
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
