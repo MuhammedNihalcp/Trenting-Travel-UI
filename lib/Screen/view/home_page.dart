@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_cards/flutter_custom_cards.dart';
 
 import 'package:tranting_travel_ui/Screen/view/widget/boy_images.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/category_items.dart';
@@ -8,13 +9,25 @@ import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
 class ScreenHome extends StatelessWidget {
-  const ScreenHome({
+  ScreenHome({
     Key? key,
     required this.width,
     required this.height,
   }) : super(key: key);
   final double width;
   final double height;
+
+  final carouselImages = [
+    'assets/image/Frame 89.png',
+    'assets/image/Frame 89 (1).png',
+    'assets/image/Frame 89 (2).png'
+  ];
+
+  List<String> carousalNames = [
+    'Sundarban',
+    'Debtakhum',
+    'Chimbuk Hill',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -23,45 +36,102 @@ class ScreenHome extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              kHeight10,
-              const PersonalDetails(),
-              kHeight5,
-              BoyImageWidget(
-                width: width,
-                height: height,
-              ),
-              kHeight10,
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.04),
-                child: Row(
-                  children: const [
-                    Text(
-                      'Popular Categories',
-                      style: homeText,
-                    ),
-                  ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                kHeight10,
+                const PersonalDetails(),
+                kHeight5,
+                BoyImageWidget(
+                  width: width,
+                  height: height,
                 ),
-              ),
-              kHeight5,
-              CategoryItems(
-                height: height,
-              ),
-              kHeight10,
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.04),
-                child: Row(
-                  children: const [
-                    Text(
-                      'Recommended',
-                      style: homeText,
-                    ),
-                  ],
+                kHeight10,
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+                  child: Row(
+                    children: const [
+                      Text(
+                        'Popular Categories',
+                        style: homeText,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              // CarouselSlider.builder(itemCount: itemCount, itemBuilder: itemBuilder, options: options)
-            ],
+                kHeight5,
+                CategoryItems(
+                  height: height,
+                ),
+                kHeight10,
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+                  child: Row(
+                    children: const [
+                      Text(
+                        'Recommended',
+                        style: homeText,
+                      ),
+                    ],
+                  ),
+                ),
+                kHeight10,
+                CarouselSlider.builder(
+                  itemCount: carouselImages.length,
+                  itemBuilder: (context, index, realIndex) => Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: width * 0.8,
+                        height: height * 0.3,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(carouselImages[index]),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          carousalNames[index],
+                          style: homeText,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: const [
+                                Icon(
+                                  Icons.star,
+                                  color: Colors.yellow,
+                                  size: 19,
+                                ),
+                                Text('(5.7)'),
+                              ],
+                            ),
+                            const Text('\$2,999',style: TextStyle(color: colorGrey),)
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  options: CarouselOptions(
+                    height: height * 0.48,
+                    autoPlay: true,
+                    autoPlayInterval: const Duration(seconds: 5),
+                    enlargeCenterPage: true,
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    autoPlayAnimationDuration:
+                        const Duration(milliseconds: 800),
+                    enableInfiniteScroll: false,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
