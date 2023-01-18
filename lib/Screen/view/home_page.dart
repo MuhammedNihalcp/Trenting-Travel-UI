@@ -27,6 +27,15 @@ class ScreenHome extends StatelessWidget {
               width: width,
               height: height,
             ),
+            kHeight10,
+            const Text(
+              'Popular Categories',
+              style: TextStyle(
+                color: colorBlack,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
