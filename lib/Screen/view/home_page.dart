@@ -41,6 +41,7 @@ class ScreenHome extends StatelessWidget {
                 CategoryText(width: width),
                 kHeight5,
                 CategoryItems(
+                  width: width,
                   height: height,
                 ),
                 kHeight10,
