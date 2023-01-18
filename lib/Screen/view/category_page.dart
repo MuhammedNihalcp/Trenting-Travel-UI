@@ -53,8 +53,6 @@ class ScreenCategory extends StatelessWidget {
               childAspectRatio: 1 / 1.5),
           itemBuilder: (BuildContext ctx, int index) {
             return SizedBox(
-              // width: width * 0.1,
-              // color: Colors.blue,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
