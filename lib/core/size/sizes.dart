@@ -12,6 +12,10 @@ const kHeight5 = SizedBox(
   height: 5,
 );
 
+const kHeight20 = SizedBox(
+  height: 20,
+);
+
 const homeText = TextStyle(
   color: colorBlack,
   fontSize: 20,
