@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tranting_travel_ui/Screen/view/home_page.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
@@ -33,7 +34,9 @@ class ScreenWelcome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(100),
                     ),
                     minimumSize: Size(width * 0.6, height * 0.1)),
-                onPressed: () {},
+                onPressed: () {
+                  Get.offAll(() => ScreenHome());
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
