@@ -38,11 +38,7 @@ class ScreenHome extends StatelessWidget {
                   children: const [
                     Text(
                       'Popular Categories',
-                      style: TextStyle(
-                        color: colorBlack,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: homeText,
                     ),
                   ],
                 ),
@@ -50,6 +46,18 @@ class ScreenHome extends StatelessWidget {
               kHeight5,
               CategoryItems(
                 height: height,
+              ),
+              kHeight10,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+                child: Row(
+                  children: const [
+                    Text(
+                      'Recommended',
+                      style: homeText,
+                    ),
+                  ],
+                ),
               )
             ],
           ),

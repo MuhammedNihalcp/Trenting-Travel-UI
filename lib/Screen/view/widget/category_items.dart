@@ -26,7 +26,7 @@ class CategoryItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LimitedBox(
-      maxHeight: height * 0.2,
+      maxHeight: height * 0.17,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: List.generate(
