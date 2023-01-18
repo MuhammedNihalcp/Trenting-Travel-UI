@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_cards/flutter_custom_cards.dart';
 
 import 'package:tranting_travel_ui/Screen/view/widget/boy_images.dart';
+import 'package:tranting_travel_ui/Screen/view/widget/carousal_text.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/carousal_widget.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/category_items.dart';
+import 'package:tranting_travel_ui/Screen/view/widget/category_text.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/personal_details.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
@@ -36,33 +38,13 @@ class ScreenHome extends StatelessWidget {
                   height: height,
                 ),
                 kHeight10,
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: width * 0.04),
-                  child: Row(
-                    children: const [
-                      Text(
-                        'Popular Categories',
-                        style: homeText,
-                      ),
-                    ],
-                  ),
-                ),
+                CategoryText(width: width),
                 kHeight5,
                 CategoryItems(
                   height: height,
                 ),
                 kHeight10,
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: width * 0.04),
-                  child: Row(
-                    children: const [
-                      Text(
-                        'Recommended',
-                        style: homeText,
-                      ),
-                    ],
-                  ),
-                ),
+                CarousalText(width: width),
                 kHeight10,
                 CarousalWidget(
                   width: width,
