@@ -48,7 +48,7 @@ class ScreenNavigator extends StatelessWidget {
                 currentIndex: landingPageController.tapIndex.value,
                 backgroundColor: colorWhite,
                 unselectedItemColor: Colors.white.withOpacity(0.5),
-                selectedItemColor: colorWhite,
+                selectedItemColor: colorBlack,
                 unselectedLabelStyle: bnm.unselectedLabelStyle,
                 selectedLabelStyle: bnm.selectedLabelStyle,
                 items: [
