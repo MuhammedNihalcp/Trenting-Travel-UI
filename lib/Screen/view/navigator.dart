@@ -10,14 +10,11 @@ import 'package:tranting_travel_ui/Screen/view/widget/bottom_menu.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 
 class ScreenNavigator extends StatelessWidget {
-  ScreenNavigator({super.key});
+  ScreenNavigator({Key? key, required this.width, required this.height})
+      : super(key: key);
 
-  // final page = const [
-  //   ScreenHome(),
-  //   ScreenSearch(),
-  //   ScreenOrder(),
-  //   ScreenAccount(),
-  // ];
+  final double width;
+  final double height;
 
   final bnm = BottomNavigationMenu();
   final LandingPageController landingPageController =
@@ -25,8 +22,6 @@ class ScreenNavigator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = Get.size.height;
-    double width = Get.size.width;
     final LandingPageController landingPageController =
         Get.put(LandingPageController());
     return SafeArea(
