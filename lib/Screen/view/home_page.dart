@@ -24,7 +24,6 @@ class ScreenHome extends StatelessWidget {
             CustomCard(
               width: width * 0.9,
               height: height * 0.35,
-             
               elevation: 0,
               child: Stack(
                 children: [
