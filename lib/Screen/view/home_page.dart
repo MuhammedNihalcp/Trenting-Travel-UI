@@ -15,6 +15,7 @@ class ScreenHome extends StatelessWidget {
           children: const [
             kHeight10,
             PersonalDetails(),
+            
           ],
         ),
       ),
