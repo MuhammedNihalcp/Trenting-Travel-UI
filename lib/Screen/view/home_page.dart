@@ -21,6 +21,7 @@ class ScreenHome extends StatelessWidget {
           children: [
             kHeight10,
             const PersonalDetails(),
+            kHeight5,
             CustomCard(
               width: width * 0.9,
               height: height * 0.35,
