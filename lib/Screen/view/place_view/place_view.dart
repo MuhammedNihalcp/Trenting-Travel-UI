@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tranting_travel_ui/Screen/view/place_view/widget/product_main_image.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/product_bottom_nav.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
@@ -27,16 +28,7 @@ class ScreenPlaceView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: double.infinity,
-                  height: height * 0.55,
-                  decoration: BoxDecoration(
-                      image: const DecorationImage(
-                        image: AssetImage('assets/image/ladaku.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      borderRadius: BorderRadius.circular(20)),
-                ),
+                ProductMainImage(height: height),
                 kHeight20,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -109,3 +101,5 @@ class ScreenPlaceView extends StatelessWidget {
     );
   }
 }
+
+
