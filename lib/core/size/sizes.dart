@@ -14,6 +14,6 @@ const kHeight5 = SizedBox(
 
 const homeText = TextStyle(
   color: colorBlack,
-  fontSize: 18,
+  fontSize: 20,
   fontWeight: FontWeight.bold,
 );
