@@ -23,7 +23,7 @@ final double height;
               color: Colors.white,
               elevation: 0,
               child: Stack(children: [
-                
+                Image(image: AssetImage('assets/image/Rectangle 10.png'),),
               ],),
             )
           ],
