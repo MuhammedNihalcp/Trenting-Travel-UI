@@ -34,7 +34,10 @@ class ScreenNavigator extends StatelessWidget {
                 width: width,
                 height: height,
               ),
-              const ScreenCategory(),
+              ScreenCategory(
+                width: width,
+                height: height,
+              ),
               const ScreenWish(),
               const ScreenAccount(),
             ],
