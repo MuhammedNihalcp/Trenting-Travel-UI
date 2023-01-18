@@ -3,10 +3,21 @@ import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
 class ScreenCategory extends StatelessWidget {
-  const ScreenCategory({Key? key, required this.width, required this.height})
+  ScreenCategory({Key? key, required this.width, required this.height})
       : super(key: key);
   final double width;
   final double height;
+
+  final gridImage = [
+    'assets/image/ladaku.png',
+    'assets/image/Frame 89.png',
+    'assets/image/Frame 89 (1).png',
+    'assets/image/Frame 89 (2).png',
+    'assets/image/category2.png',
+    'assets/image/category.png',
+    'assets/image/category3.png',
+    'assets/image/category4.png',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +51,7 @@ class ScreenCategory extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             color: colorWhite,
                             image: DecorationImage(
-                              image: AssetImage(),
+                              image: AssetImage(gridImage[index]),
                               // fit: BoxFit.cover,
                             ),
                           ),
@@ -52,7 +63,7 @@ class ScreenCategory extends StatelessWidget {
                     height: 5,
                   ),
                   Text(
-                   '',
+                    '',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontWeight: FontWeight.w400),
@@ -74,7 +85,7 @@ class ScreenCategory extends StatelessWidget {
             ),
           );
         },
-        itemCount: ,
+        itemCount: gridImage.length,
       ))),
     );
   }
