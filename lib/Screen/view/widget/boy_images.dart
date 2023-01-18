@@ -49,10 +49,10 @@ class BoyImageWidget extends StatelessWidget {
           ),
           Positioned(
             left: width * 0.1,
-            child:const Image(
+            child: const Image(
               image: AssetImage('assets/image/Frame-3.png'),
             ),
-          )
+          ),
         ],
       ),
     );
