@@ -50,16 +50,17 @@ class ScreenNavigator extends StatelessWidget {
                 onTap: ((index) => landingPageController.changeTabIndex(index)),
                 currentIndex: landingPageController.tapIndex.value,
                 backgroundColor: colorWhite,
-                unselectedItemColor: Colors.white.withOpacity(0.5),
-                selectedItemColor: colorBlack,
+                unselectedItemColor:colorGrey,
+                selectedItemColor: buttonC,
                 unselectedLabelStyle: bnm.unselectedLabelStyle,
                 selectedLabelStyle: bnm.selectedLabelStyle,
+                elevation: 0,
                 items: [
                   BottomNavigationBarItem(
                     icon: Container(
                       margin: const EdgeInsets.only(bottom: 7),
                       child: const Icon(
-                        Icons.home,
+                        Icons.home_filled,
                         size: 20.0,
                       ),
                     ),
