@@ -66,6 +66,11 @@ flutter:
     - assets/image/Frame 89.png
     - assets/image/Frame 89 (1).png
     - assets/image/Frame 89 (2).png
+    - assets/image/ladaku.png
+    - assets/image/category.png
+    - assets/image/category2.png
+    - assets/image/category3.png
+    - assets/image/category4.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
