@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_cards/flutter_custom_cards.dart';
+
 import 'package:tranting_travel_ui/Screen/view/widget/boy_images.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/personal_details.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
