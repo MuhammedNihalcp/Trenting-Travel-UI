@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:tranting_travel_ui/Screen/controller/navigator_controller/navigator_controller.dart';
-import 'package:tranting_travel_ui/Screen/view/Wishlist.dart';
-import 'package:tranting_travel_ui/Screen/view/account_page.dart';
-import 'package:tranting_travel_ui/Screen/view/category_page.dart';
-import 'package:tranting_travel_ui/Screen/view/home_page.dart';
+import 'package:tranting_travel_ui/Screen/wish_page/Wishlist.dart';
+import 'package:tranting_travel_ui/Screen/view/account_page/account_page.dart';
+import 'package:tranting_travel_ui/Screen/view/category/category_page.dart';
+import 'package:tranting_travel_ui/Screen/view/home/home_page.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/bottom_menu.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tranting_travel_ui/Screen/view/home_page.dart';
-import 'package:tranting_travel_ui/Screen/view/navigator.dart';
+import 'package:tranting_travel_ui/Screen/view/home/home_page.dart';
+import 'package:tranting_travel_ui/Screen/navigator/navigator.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
