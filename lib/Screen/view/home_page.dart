@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:tranting_travel_ui/Screen/view/widget/boy_images.dart';
@@ -59,7 +60,7 @@ class ScreenHome extends StatelessWidget {
                   ],
                 ),
               ),
-              
+              // CarouselSlider.builder(itemCount: itemCount, itemBuilder: itemBuilder, options: options)
             ],
           ),
         ),
