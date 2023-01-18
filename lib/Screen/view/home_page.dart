@@ -20,6 +20,11 @@ final double height;
             CustomCard(
               width: width * 0.8,
               height: height * 0.3,
+              color: Colors.white,
+              elevation: 0,
+              child: Stack(children: [
+                
+              ],),
             )
           ],
         ),
