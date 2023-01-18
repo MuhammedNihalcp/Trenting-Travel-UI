@@ -8,7 +8,7 @@ class ScreenWelcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundC,
-      body: ,
+     
     );
   }
 }
