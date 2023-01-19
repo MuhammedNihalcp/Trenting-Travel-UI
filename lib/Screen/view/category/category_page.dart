@@ -42,6 +42,26 @@ class ScreenCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundC,
+      appBar: AppBar(
+        title: const Text(
+          'Categories',
+          style: TextStyle(
+            color: colorBlack,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: backgroundC,
+        elevation: 0,
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(
+              Icons.settings,
+              color: colorBlack,
+            ),
+          )
+        ],
+      ),
       body: SafeArea(
         child: GridView.builder(
           padding: EdgeInsets.zero,
