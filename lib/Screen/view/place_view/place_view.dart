@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tranting_travel_ui/Screen/view/place_view/widget/more_images.dart';
+import 'package:tranting_travel_ui/Screen/view/place_view/widget/place_description.dart';
+import 'package:tranting_travel_ui/Screen/view/place_view/widget/place_name.dart';
 import 'package:tranting_travel_ui/Screen/view/place_view/widget/product_main_image.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/product_bottom_nav.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
@@ -32,13 +35,7 @@ class ScreenPlaceView extends StatelessWidget {
                 kHeight20,
                 const ProductName(),
                 kHeight10,
-                const Text(
-                  'Udaipur, also known as the City of Lakes, is the crown jewel of the state of Rajasthan. It is surrounded by the beautiful Aravalli Hills',
-                  style: TextStyle(
-                    color: colorGrey,
-                    fontSize: 16,
-                  ),
-                ),
+                const PlaceDescription(),
                 kHeight10,
                 const Text(
                   'More Images',
@@ -48,28 +45,9 @@ class ScreenPlaceView extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                LimitedBox(
-                  maxHeight: height * 0.15,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: List.generate(
-                      placeImages.length,
-                      (index) => Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: Image.asset(
-                                placeImages[index],
-                              ),
-                            ),
-                            kHeight5,
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                MoreImageWidget(
+                  height: height,
+                  placeImages: placeImages,
                 ),
               ],
             ),
@@ -84,31 +62,7 @@ class ScreenPlaceView extends StatelessWidget {
   }
 }
 
-class ProductName extends StatelessWidget {
-  const ProductName({
-    Key? key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Text(
-          'Lalakhal',
-          style: homeText,
-        ),
-        Row(
-          children: const [
-            Icon(
-              Icons.star,
-              color: Colors.yellow,
-              size: 19,
-            ),
-            Text('(5.7)'),
-          ],
-        ),
-      ],
-    );
-  }
-}
+
+
+
