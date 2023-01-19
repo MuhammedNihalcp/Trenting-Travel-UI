@@ -1,6 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_cards/flutter_custom_cards.dart';
+
 
 import 'package:tranting_travel_ui/Screen/view/widget/boy_images.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/carousal_text.dart';
@@ -12,7 +12,7 @@ import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
 class ScreenHome extends StatelessWidget {
-  ScreenHome({
+  const ScreenHome({
     Key? key,
     required this.width,
     required this.height,

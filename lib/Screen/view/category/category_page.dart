@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
+// ignore: must_be_immutable
 class ScreenCategory extends StatelessWidget {
   ScreenCategory({Key? key, required this.width, required this.height})
       : super(key: key);

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:get/get.dart';
-import 'package:tranting_travel_ui/Screen/view/place_view/place_view.dart';
+import 'package:tranting_travel_ui/Screen/view/category/category_page.dart';
+
 import 'package:tranting_travel_ui/core/color/colors.dart';
 import 'package:tranting_travel_ui/core/size/sizes.dart';
 
+// ignore: must_be_immutable
 class CategoryItems extends StatelessWidget {
   CategoryItems({
     Key? key,
@@ -37,8 +39,8 @@ class CategoryItems extends StatelessWidget {
           (index) => Padding(
             padding: const EdgeInsets.all(8.0),
             child: GestureDetector(
-              onTap: (){
-                Get.to(()=>ScreenPlaceView(width: width, height: height));
+              onTap: () {
+                Get.to(() => ScreenCategory(width: width, height: height));
               },
               child: Column(
                 children: [

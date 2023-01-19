@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class ScreenWish extends StatelessWidget {
@@ -7,6 +5,6 @@ class ScreenWish extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

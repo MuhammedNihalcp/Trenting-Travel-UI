@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tranting_travel_ui/Screen/view/place_view/widget/more_images.dart';
 import 'package:tranting_travel_ui/Screen/view/place_view/widget/place_description.dart';
 import 'package:tranting_travel_ui/Screen/view/place_view/widget/place_name.dart';
+import 'package:tranting_travel_ui/Screen/view/place_view/widget/place_price.dart';
 import 'package:tranting_travel_ui/Screen/view/place_view/widget/product_main_image.dart';
 import 'package:tranting_travel_ui/Screen/view/widget/product_bottom_nav.dart';
 import 'package:tranting_travel_ui/core/color/colors.dart';
@@ -35,6 +36,8 @@ class ScreenPlaceView extends StatelessWidget {
                 kHeight20,
                 const ProductName(),
                 kHeight10,
+               const PlacePrice(),
+                kHeight10,
                 const PlaceDescription(),
                 kHeight10,
                 const Text(
@@ -61,8 +64,5 @@ class ScreenPlaceView extends StatelessWidget {
     );
   }
 }
-
-
-
 
 
