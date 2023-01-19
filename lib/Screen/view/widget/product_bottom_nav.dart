@@ -56,7 +56,7 @@ class ProductBottomNev extends StatelessWidget {
                 onPressed: () {
                   Get.snackbar(
                     'Success',
-                    'Your booking success',
+                    'Your booking is success',
                     colorText: Colors.green,
                     backgroundColor: colorWhite
                   );
